@@ -22,4 +22,9 @@ export class BooksProviderService {
     console.log("getting Books");
     return this.http.get('/api/listings');
   }
+
+  getUser(){
+    console.log("getting user");
+    return this.http.get('/getUser');
+  }
 }

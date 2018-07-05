@@ -4,7 +4,31 @@
     "secure": false,
     "changeOrigin": true 
    },
+
+   "/signin": {
+    "target": "http://localhost:3000/",
+    "secure": false,
+    "changeOrigin": true 
+   },
+
+   "/signup": {
+    "target": "http://localhost:3000/",
+    "secure": false,
+    "changeOrigin": true 
+   },
+
+   "/logout": {
+    "target": "http://localhost:3000/",
+    "secure": false,
+    "changeOrigin": true 
+   },
     
+   "/getUser": {
+    "target": "http://localhost:3000/",
+    "secure": false,
+    "changeOrigin": true 
+   },
+
     "/uploads/*":{
     "target": "http://localhost:3000/",
     "secure": false,

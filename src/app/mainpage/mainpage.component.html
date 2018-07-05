@@ -21,11 +21,12 @@
             </div> 
           </li>
         </ul>
-          <div *ngIf="!user">
+        
+          <div *ngIf="!isUser">
             <button class="btn btn-dark btn-lg" (click)="signin()">SIGNIN</button>
             <button class="btn btn-dark btn-lg " (click)="signup()">SIGNUP</button>
           </div>
-          <div *ngIf= "user" id="user">
+          <div *ngIf= "isUser" id="user">
             <button class="btn btn-dark btn-lg ">MYCART</button>
             <button class="btn btn-dark btn-lg ">MESSAGES</button> 
             <ul class="navbar-nav mr-auto "> 
@@ -35,7 +36,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">PROFILE</a>
-                <a class="dropdown-item" href="#">LOGOUT</a>
+                <a class="dropdown-item" href="/logout">LOGOUT</a>
               </div>  
               </li>
             </ul> 
