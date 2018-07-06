@@ -1,10 +1,22 @@
 <div class="wrapper">
-    <form class="form-signin">       
+    <form class="form-signin" action="/api/listings" method="POST">       
       <h2 class="form-signin-heading">Add a book for sale</h2>
+      <input type="number" name="seller" class="form-control" placeholder="User Id" value="{{userId}}" readonly>
       <input type="text" class="form-control" name="bookname" placeholder="Book Name" required="" autofocus="" />
       <input type="text" class="form-control" name="authorname" placeholder="Author Name" required=""/>      
       <input type="number" class="form-control" name="price" placeholder="Price" required=""/>
-
+      <input type="number" class="form-control" name="condition" placeholder="Condition" min="1" max="4" required=""/>
+     
+      <div *ngIf= "imageUploaded">
+        <input type="text"  class="form-control"  name="imageofitem" value="{{imageURL}}" readonly />
+      </div>
+     
+      <div *ngIf= "!imageUploaded">
+        <input type="file"  class="form-control"  name="photo" ng2FileSelect [uploader]="uploader" />
+        <button type="button" class="btn btn-success btn-s"(click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length" >
+        Upload Image before submitting the form
+  </button>
+      </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>   
     </form>
   </div>
