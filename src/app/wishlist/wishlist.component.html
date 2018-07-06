@@ -1,0 +1,44 @@
+<div class = "contain">
+<div *ngFor="let book of booksArray">
+  <!-- <span >{{books.bookname}}</span>  -->
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src= {{book?.imageofitem}} alt="Card image cap">
+    <div class="card-body">
+      <p class="card-title"><span>BOOK NAME:</span>{{book?.bookname}}</p>
+      <p class="card-text"><span>AUTHOR:</span>{{book?.authorname}}</p>
+      <p class="card-text"><span>PRICE:</span>{{book?.price}}</p>
+      <p class="card-text"><span>QUANTITY:</span>{{book?.quantity}}</p>
+      <p class="card-text"><span>CONDITION:</span>{{book?.Condition}}</p>
+      <p class="card-text"><span>SELLER ID:</span>{{book?.seller}}</p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- 
+Condition
+:
+"New"
+authorname
+:
+"def"
+bookname
+:
+"abc"
+createdAt
+:
+"2018-07-04T08:35:14.000Z"
+id
+:
+1
+imageofitem
+:
+"./uploads/no-image.jpg"
+price
+:
+120
+quantity
+:
+4
+seller
+:
+1 -->

@@ -14,6 +14,8 @@ import { BooksComponent } from './books/books.component';
 import { BookdetailComponent } from './bookdetail/bookdetail.component';
 import { BooksGuard } from './books.guard';
 import { CartComponent } from './cart/cart.component';
+import { MessagesComponent } from './messages/messages.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
   {
@@ -48,8 +50,15 @@ const routes: Routes = [
   {
     path: 'signup',
     component: SignupComponent
+  },
+  {
+    path: 'messages',
+    component: MessagesComponent
+  },
+  {
+    path: 'wishlist',
+    component: WishlistComponent
   }
-
 ];
 
 @NgModule({
@@ -62,7 +71,9 @@ const routes: Routes = [
     BooksComponent,
     FileSelectDirective,
     BookdetailComponent,
-    CartComponent
+    CartComponent,
+    MessagesComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,

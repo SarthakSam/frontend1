@@ -47,6 +47,10 @@ export class ListingComponent implements OnInit {
    this.route.navigate(['signin']);
  }
 
+  wishlist(){
+    this.route.navigate(['wishlist']);
+  }
+
  signup(){
    this.route.navigate(['signup']);
  }

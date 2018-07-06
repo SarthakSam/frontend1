@@ -9,8 +9,8 @@
       <p class="card-text"><span>CONDITION:</span>{{bookDetails?.Condition}}</p>
       <p class="card-text"><span>SELLER:</span>{{seller}}</p>
       <div id="buttonContainer">
-        <a href="/cart" class="btn btn-primary">ADD TO CART</a>
-        <a href="/messages" class="btn btn-primary">Message Seller</a>
+        <button (click)="addToWishlist()" class= "btn btn-info btn-lg">ADD TO Wishlist</button>
+        <button  class= "btn btn-info btn-lg">Message to user</button>
       </div>
      
     </div>

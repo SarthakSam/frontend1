@@ -32,4 +32,18 @@ export class BooksProviderService {
     console.log("getting user");
     return this.http.get('/getUser');
   }
+
+  postAddToWishlist(book){
+    console.log("making post request to wishlist");
+    return this.http.post('/api/wishlist',book,httpOptions);
+ }
+
+   getSeller(sellerId: number){
+    console.log("getting seller");
+    return this.http.get('/getUser/'+sellerId);
+   }
+
+   getWishlist(id){
+    return this.http.get('/api/wishlist/'+id);
+   }
 }
