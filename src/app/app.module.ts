@@ -11,6 +11,9 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { AddComponent } from './add/add.component';
 import { BooksComponent } from './books/books.component';
+import { BookdetailComponent } from './bookdetail/bookdetail.component';
+import { BooksGuard } from './books.guard';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {
@@ -29,6 +32,12 @@ const routes: Routes = [
                 {
                   path: 'add',
                   component: AddComponent
+                  // canActivate: [BooksGuard]
+                },
+                {
+                  path: 'books/:id',
+                  component: BookdetailComponent
+                  // canActivate: [BooksGuard]
                 }
               ]
   }, 
@@ -51,7 +60,9 @@ const routes: Routes = [
     SignupComponent,
     AddComponent,
     BooksComponent,
-    FileSelectDirective
+    FileSelectDirective,
+    BookdetailComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +70,7 @@ const routes: Routes = [
     HttpClientModule,
     // FormsModule
   ],
-  providers: [],
+  providers: [BooksGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

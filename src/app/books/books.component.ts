@@ -35,6 +35,15 @@ export class BooksComponent implements OnInit {
        this.route.navigate(['listing/add']); 
     }
   }
+ 
+
+   viewBook(book){
+      // console.log("in view book",book);
+      if(this.listingComponent.isUser)
+      this.route.navigate([book.id], { relativeTo: this.router});
+      else
+      this.route.navigate(['signin'])
+   }
 
 
 }

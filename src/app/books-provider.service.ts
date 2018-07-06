@@ -23,6 +23,11 @@ export class BooksProviderService {
     return this.http.get('/api/listings');
   }
 
+   getParticularBook(bookId: number){
+     console.log("bookservice",bookId)
+    return this.http.get('/api/listings/'+bookId);
+   }
+
   getUser(){
     console.log("getting user");
     return this.http.get('/getUser');

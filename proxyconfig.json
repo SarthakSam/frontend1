@@ -5,6 +5,12 @@
     "changeOrigin": true 
    },
 
+   "/api/listings/*":{
+    "target": "http://localhost:3000/",
+    "secure": false,
+    "changeOrigin": true 
+   },
+
    "/api/upload":{
     "target": "http://localhost:3000/",
     "secure": false,
