@@ -1,17 +1,50 @@
-<div class="container">  
-
-    <div class="jumbotron">
-       <h1 class="display-4"><i class="fas fa-book"></i> The BOOKS Gallery</h1>
-       <p class="lead"> A place to find all kind of books.</p>
-     </div>
-     <div class="row">
-        <div class="card col-lg-4 col-sm-6" *ngFor="let book of listing"	>
-            <img class=" img-thumbnail" src={{book.imageofitem}}>
-            <div class="card-block">
-              <h4 class="card-title">NAME: {{book.bookname}}</h4>
-              <p class="card-text">AUTHOR: {{book.authorname}}</p>
-              <button class="btn btn-outline-info btn-lg btn-block">VIEW</button>  
-         </div> 
-     </div>
-
-</div>     
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+        <div class="container">
+          <h2>BOOKAPP</h2>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  FILTER
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">BY PRICE</a>
+                  <a class="dropdown-item" href="#">BY CONDITION</a>
+                </div> 
+              </li>
+            </ul>
+            
+              <div *ngIf="!isUser">
+                <button class="btn btn-dark btn-lg" (click)="signin()">SIGNIN</button>
+                <button class="btn btn-dark btn-lg " (click)="signup()">SIGNUP</button>
+              </div>
+              <div *ngIf= "isUser" id="user">
+                <button class="btn btn-dark btn-lg ">MYCART</button>
+                <button class="btn btn-dark btn-lg ">MESSAGES</button> 
+                <ul class="navbar-nav mr-auto "> 
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    USER
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">PROFILE</a>
+                    <a class="dropdown-item" href="/logout">LOGOUT</a>
+                  </div>  
+                  </li>
+                </ul> 
+              </div>
+           
+          </div>
+          
+        </div>
+      
+      </nav>
+      <router-outlet ></router-outlet>

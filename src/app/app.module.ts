@@ -5,25 +5,30 @@ import {HttpClientModule} from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { ListingComponent } from './listing/listing.component';
-import { MainpageComponent } from './mainpage/mainpage.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
+import { AddComponent } from './add/add.component';
+import { BooksComponent } from './books/books.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'mainpage/listing',
+    redirectTo: 'listing/books',
     pathMatch: 'full'
   },
   {
-    path: 'mainpage',
-    component: MainpageComponent,
+    path: 'listing',
+    component: ListingComponent,
     children: [
-      {
-        path: 'listing',
-        component: ListingComponent
-      }
-    ]
+                {
+                  path: 'books',
+                  component: BooksComponent
+                },
+                {
+                  path: 'add',
+                  component: AddComponent
+                }
+              ]
   }, 
   {
      path: 'signin',
@@ -32,16 +37,18 @@ const routes: Routes = [
   {
     path: 'signup',
     component: SignupComponent
- }
+  }
+
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     ListingComponent,
-    MainpageComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    AddComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,
