@@ -12,6 +12,7 @@ import { BooksComponent } from '../books/books.component';
 export class ListingComponent implements OnInit {
   isUser=false;
   user: User = null;
+  searchString: string ="";
  //   {
  //   email: "",
  //   firstname: "",
@@ -57,6 +58,13 @@ export class ListingComponent implements OnInit {
 
 mymessages(){
   this.route.navigate(['messages']);
+}
+
+searchForBook(str){
+  // console.log(str.value)
+  this.searchString=str.value;
+  str.value="";
+  this.route.navigate(['filter',3], { relativeTo: this.router});
 }
 
 }

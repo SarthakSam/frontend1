@@ -17,3 +17,11 @@ div *{
 div #user{
     display: flex;
 }
+
+.forming{
+    display: flex;
+}
+
+.forming input{
+    width: 250px;
+}

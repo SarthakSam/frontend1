@@ -55,4 +55,12 @@ export class BooksProviderService {
     return this.http.get('/api/messages/'+userId);      
    }
 
+   filterBy(id: number){
+      return this.http.get('/api/listings/filter/'+id);
+   }
+
+   search(name: string){
+    return this.http.get('/api/listings/search/'+name);
+   }
+
 }

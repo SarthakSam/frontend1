@@ -15,6 +15,7 @@ import { BookdetailComponent } from './bookdetail/bookdetail.component';
 import { BooksGuard } from './books.guard';
 import { MessagesComponent } from './messages/messages.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { FilterComponent } from './filter/filter.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,10 @@ const routes: Routes = [
                   path: 'books/:id',
                   component: BookdetailComponent
                   // canActivate: [BooksGuard]
+                },
+                {
+                  path: 'filter/:id',
+                  component: FilterComponent
                 }
               ]
   }, 
@@ -71,7 +76,8 @@ const routes: Routes = [
     FileSelectDirective,
     BookdetailComponent,
     MessagesComponent,
-    WishlistComponent
+    WishlistComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
