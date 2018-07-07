@@ -33,13 +33,13 @@ const routes: Routes = [
                 },
                 {
                   path: 'add',
-                  component: AddComponent
-                  // canActivate: [BooksGuard]
+                  component: AddComponent,
+                  canActivate: [BooksGuard]
                 },
                 {
                   path: 'books/:id',
-                  component: BookdetailComponent
-                  // canActivate: [BooksGuard]
+                  component: BookdetailComponent,
+                  canActivate: [BooksGuard]
                 },
                 {
                   path: 'filter/:id',

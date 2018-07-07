@@ -1,6 +1,5 @@
 <div class = "contain">
 <div *ngFor="let book of booksArray">
-  <!-- <span >{{books.bookname}}</span>  -->
   <div class="card" style="width: 18rem;">
     <img class="card-img-top" src= {{book?.imageofitem}} alt="Card image cap">
     <div class="card-body">
@@ -13,4 +12,5 @@
     </div>
   </div>
 </div>
+<h1 *ngIf="booksArray"> WISHLIST IS EMPTY</h1>
 </div>

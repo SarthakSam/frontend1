@@ -11,6 +11,7 @@ import { BooksProviderService } from '../books-provider.service';
 export class FilterComponent implements OnInit {
   selected: number=0;
   listing: any;
+  length: number =0;
   constructor(private router: ActivatedRoute,
     private route: Router,public listingComponent: ListingComponent,public booksProviderService: BooksProviderService) { }
 
@@ -22,6 +23,7 @@ export class FilterComponent implements OnInit {
         this.booksProviderService.filterBy(this.selected).subscribe(res => {
           // console.log(res);
           this.listing=res;
+          this.length=this.listing.length;  
         });
       }
       else if(this.selected===3){
@@ -29,6 +31,7 @@ export class FilterComponent implements OnInit {
             this.booksProviderService.search(this.listingComponent.searchString).subscribe(res => {
               console.log(res);
               this.listing=res;
+              this.length=this.listing.length;
             });
             
       }
