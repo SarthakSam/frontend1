@@ -2,7 +2,7 @@ import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
 import { User } from '../user';
 import {Router, ActivatedRoute} from '@angular/router';
 import { BooksProviderService } from '../books-provider.service'; 
-
+import { BooksComponent } from '../books/books.component';
 
 @Component({
   selector: 'app-listing',
@@ -47,12 +47,16 @@ export class ListingComponent implements OnInit {
    this.route.navigate(['signin']);
  }
 
-  wishlist(){
-    this.route.navigate(['wishlist']);
-  }
-
  signup(){
    this.route.navigate(['signup']);
  }
+
+ wishlist(){
+  this.route.navigate(['wishlist']);
+}
+
+mymessages(){
+  this.route.navigate(['messages']);
+}
 
 }

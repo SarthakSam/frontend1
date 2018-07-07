@@ -11,6 +11,7 @@ import {Router, ActivatedRoute} from '@angular/router';
 })
 export class BooksComponent implements OnInit {
   listing:any;
+  public listFilter: number=0;
 
   constructor(private router: ActivatedRoute,
     private route: Router,public booksProviderService: BooksProviderService,public listingComponent: ListingComponent) {
@@ -27,7 +28,7 @@ export class BooksComponent implements OnInit {
     });
   } 
 
-  addBook(){
+  public addBook(){
     //  console.log(this.mainpageComponent.user);
     if(!this.listingComponent.user)
        this.route.navigate(['signin']);

@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+}
+.card{
+    margin: 5px;
+}
+
+.card .card-body p span{
+    /* text-align: left; */
+    margin-left: 5px;
+    /* marg */
+    color: green;
+    font-weight: 600;
+}

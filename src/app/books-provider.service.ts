@@ -46,4 +46,13 @@ export class BooksProviderService {
    getWishlist(id){
     return this.http.get('/api/wishlist/'+id);
    }
+
+   postMessage(messageObj){
+      return  this.http.post('/api/messages',messageObj,httpOptions);
+   }
+
+   getMessages(userId: number){
+    return this.http.get('/api/messages/'+userId);      
+   }
+
 }

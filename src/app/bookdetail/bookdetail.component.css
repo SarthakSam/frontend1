@@ -25,10 +25,11 @@ p{
     font-weight: 600;
 }
 
-#buttonContainer{
-    display: flex;
-}
 
 button{
     margin: auto;
+}
+
+.message{
+   margin: 3px;
 }

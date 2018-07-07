@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BooksProviderService } from '../books-provider.service'; 
 
 @Component({
   selector: 'app-messages',
@@ -6,10 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent implements OnInit {
+  messages: any;
 
-  constructor() { }
+  constructor(public booksProviderService: BooksProviderService) { }
 
   ngOnInit() {
+    this.booksProviderService.getUser().subscribe(res => {
+      
+      this.booksProviderService.getMessages(res["id"]).subscribe(res => {
+       console.log(res);
+       this.messages= res;
+        // for(let i=0;i< this.wishlist.length;i++){
+        //   this.booksProviderService.getParticularBook(this.wishlist[i].bookid).subscribe(res => {
+        //     console.log(res);
+        //     this.booksArray.push(res);
+        //   });    
+        //   }
+        
+      });
+    })
+
   }
 
 }

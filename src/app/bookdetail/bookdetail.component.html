@@ -8,34 +8,13 @@
       <p class="card-text"><span>QUANTITY:</span>{{bookDetails?.quantity}}</p>
       <p class="card-text"><span>CONDITION:</span>{{bookDetails?.Condition}}</p>
       <p class="card-text"><span>SELLER:</span>{{seller}}</p>
-      <div id="buttonContainer">
-        <button (click)="addToWishlist()" class= "btn btn-info btn-lg">ADD TO Wishlist</button>
-        <button  class= "btn btn-info btn-lg">Message to user</button>
-      </div>
-     
+        <button (click)="addToWishlist()" class= "btn btn-info btn-block">ADD TO Wishlist</button>
+    </div>
+    <div id="Message">
+     <h3>Write a message to  seller</h3>
+      <input type="text"  class="form-control"  #message placeholder="Write message">
+      <button class= "btn btn-info btn-block" (click)="sendMessage(message)">Send</button>
     </div>
   </div>
 </div>
 
-
-
-<!-- <div class="container">
-      
-        <img class="card-img-top" src={{bookDetails.imageofitem}} alt="Card image cap">
-      
-      <div class="card" style="width: 26rem;">
-        <div class="card-body">
-          <h1 class="card-title"><span>BOOK NAME:</span>{{bookDetails.bookname}}</h1>
-          <p class="card-text"><span>AUTHOR:</span>{{bookDetails.authorname}}</p>
-          <p class="card-text"><span>PRICE:</span>{{bookDetails.price}}</p>
-          <p class="card-text"><span>QUANTITY:</span>{{bookDetails.quantity}}</p>
-          <p class="card-text"><span>CONDITION:</span>{{bookDetails.Condition}}</p>
-          <p class="card-text"><span>SELLER:</span>{{seller}}</p>
-          <div id="buttonContainer">
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-         
-        </div>
-      </div>
-</div> -->

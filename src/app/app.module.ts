@@ -13,7 +13,6 @@ import { AddComponent } from './add/add.component';
 import { BooksComponent } from './books/books.component';
 import { BookdetailComponent } from './bookdetail/bookdetail.component';
 import { BooksGuard } from './books.guard';
-import { CartComponent } from './cart/cart.component';
 import { MessagesComponent } from './messages/messages.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 
@@ -71,7 +70,6 @@ const routes: Routes = [
     BooksComponent,
     FileSelectDirective,
     BookdetailComponent,
-    CartComponent,
     MessagesComponent,
     WishlistComponent
   ],

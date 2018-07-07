@@ -1,3 +1,13 @@
-<p>
-  messages works!
-</p>
+<div class = "container">
+  <h1>MY MESSAGES</h1> 
+  <div *ngFor="let message of messages">
+      <div class="card" style="width: 60rem;">
+        <div class="card-body">
+          <p class="card-title"><span>BOOK NAME:</span>  {{message?.bookname}}</p>
+          <p class="card-text"><span>SENDER NAME:</span>{{message?.sendername}}</p>
+          <p class="card-text"><span>TEXT CONTENT:</span>{{message?.textcontent}}</p>
+          <p class="card-text"><span>DATE AND TIME:</span>{{message?.createdAt}}</p>
+        </div>
+      </div>
+    </div>
+    </div>
